@@ -1,0 +1,83 @@
+.home_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+  .content_overlay_sm_device {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 0.7707457983193278) 0%,
+      rgba(0, 0, 0, 0.5214460784313726) 59%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+  }
+  // content
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 90%;
+
+    // first name
+    .first_name {
+      font-family: $heading_font_family;
+      font-size: 6rem;
+      font-weight: 900;
+      color: $secondary_color;
+      line-height: 0.8;
+      text-transform: uppercase;
+    }
+    // last name
+    .last_name {
+      font-family: $heading_font_family;
+      font-size: 6rem;
+      font-weight: 900;
+      color: $text_white;
+      text-transform: uppercase;
+    }
+    // informations
+    .informations {
+      font-family: $text_font_family;
+      color: $secondary_color;
+      font-size: 1.4rem;
+      line-height: 3;
+      text-transform: uppercase;
+    }
+  }
+
+  // shafat khan image
+  &_image {
+    width: 800px;
+    img {
+      width: 100%;
+      margin-bottom: -5px;
+    }
+  }
+}
+
+footer .footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 30px;
+  font-family: $text_font_family;
+  font-size: 1rem;
+  color: $secondary_color;
+
+  // copyright
+  .copyright {
+    font-size: 1.9rem;
+    color: $secondary_color;
+    margin-right: 0.4rem;
+  }
+}

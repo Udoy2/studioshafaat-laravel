@@ -1,0 +1,128 @@
+@include media-tablet-potrait {
+  .navbar-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    .page_heading {
+      display: none;
+    }
+    .navbar-brand {
+      margin-top: 1.5rem;
+    }
+
+    .navbar-toggler {
+      &-icon {
+        &::before {
+          width: 100% !important;
+        }
+        &::after {
+          width: 100% !important;
+        }
+      }
+
+      // open state
+      &.open {
+        .navbar-toggler {
+          &-icon {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            transform: rotate(90deg);
+          }
+          &-icon::before {
+            width: 25px !important;
+            transform: rotate(45deg) translateY(0.5px) translateX(2.5px);
+          }
+          &-icon::after {
+            width: 25px !important;
+            transform: rotate(-45deg) translateY(-0.5px) translateX(2.5px);
+          }
+
+          // hover in open state
+        }
+        &::after {
+          transform: scale(40);
+          opacity: 0;
+          pointer-events: none;
+        }
+        &:hover {
+          .navbar-toggler-icon {
+            width: 100%;
+            @include hamburger-hover-common;
+          }
+        }
+      }
+    }
+  }
+  .nav-link {
+    right: 50% !important;
+    transform: translateX(50%);
+  }
+}
+
+@include media-mobile {
+  .navbar-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    .page_heading {
+      display: none;
+    }
+    .navbar-brand {
+      margin-top: 1.5rem;
+    }
+    .navbar-toggler {
+      &-icon {
+        &::before {
+          width: 100% !important;
+        }
+        &::after {
+          width: 100% !important;
+        }
+      }
+
+      // open state
+      &.open {
+        .navbar-toggler {
+          &-icon {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            transform: rotate(90deg);
+          }
+          &-icon::before {
+            width: 25px !important;
+            transform: rotate(45deg) translateY(0.5px) translateX(2.5px);
+          }
+          &-icon::after {
+            width: 25px !important;
+            transform: rotate(-45deg) translateY(-0.5px) translateX(2.5px);
+          }
+
+          // hover in open state
+        }
+        &::after {
+          transform: scale(40);
+          opacity: 0;
+          pointer-events: none;
+        }
+        &:hover {
+          .navbar-toggler-icon {
+            width: 100%;
+            @include hamburger-hover-common;
+          }
+        }
+      }
+    }
+  }
+  .navbar-collapse {
+    width: 100%;
+  }
+  .nav-link {
+    right: 50% !important;
+    transform: translateX(50%);
+    font-size: 2rem !important;
+  }
+
+  // --------end
+}

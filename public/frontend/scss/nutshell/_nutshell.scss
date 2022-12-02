@@ -1,0 +1,78 @@
+.nutshell_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+
+  // content
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+
+    // first name
+    .first_name {
+      font-family: $heading_font_family;
+      font-size: 5rem;
+      font-weight: 900;
+      color: $secondary_color;
+      line-height: 0.8;
+      text-transform: uppercase;
+      margin-top: 2rem;
+    }
+    // last name
+    .last_name {
+      font-family: $heading_font_family;
+      font-size: 5rem;
+      font-weight: 900;
+      color: $text_white;
+      text-transform: uppercase;
+    }
+    // informations
+    .informations {
+      font-family: $text_font_family;
+      color: $secondary_color;
+      font-size: 1.2rem;
+      line-height: 3;
+      text-transform: uppercase;
+    }
+    .details {
+      font-family: $text_font_family;
+      color: $secondary_color;
+      font-size: 1rem;
+      margin-top: 2rem;
+      width: 500px;
+      line-height: 1.6;
+    }
+    .resume {
+      margin-top: 3rem;
+    }
+  }
+
+  // shafat khan image
+  &_image {
+    width: 800px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+footer .footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 30px;
+  font-family: $text_font_family;
+  font-size: 1rem;
+  color: $secondary_color;
+
+  // copyright
+  .copyright {
+    font-size: 1.9rem;
+    color: $secondary_color;
+    margin-right: 0.4rem;
+  }
+}

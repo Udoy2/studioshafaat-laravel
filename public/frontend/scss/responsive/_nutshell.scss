@@ -1,0 +1,158 @@
+@include media-desktop-wide {
+}
+
+@include media-desktop {
+  body {
+    overflow-y: auto !important;
+  }
+  .container {
+    width: 90% !important;
+  }
+  .nutshell_container {
+    &_content {
+      align-items: center;
+
+      .informations {
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+
+      .first_name,
+      .last_name {
+        font-size: 5rem;
+      }
+      .details {
+        width: 70% !important;
+        text-align: center;
+      }
+      .resume {
+        padding-bottom: 2rem;
+      }
+    }
+    // shafat khan image
+    &_image {
+      display: none !important;
+    }
+  }
+
+  footer .footer {
+    display: none;
+  }
+}
+
+@include media-tablet-wide {
+  body {
+    overflow-y: auto !important;
+  }
+  .container {
+    width: 90% !important;
+  }
+  .nutshell_container {
+    &_content {
+      align-items: center;
+
+      .informations {
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+
+      .first_name,
+      .last_name {
+        font-size: 5rem;
+      }
+      .details {
+        width: 70% !important;
+        text-align: center;
+      }
+      .resume {
+        padding-bottom: 2rem;
+      }
+    }
+    // shafat khan image
+    &_image {
+      display: none !important;
+    }
+  }
+
+  footer .footer {
+    display: none;
+  }
+}
+
+@include media-tablet-potrait {
+  body {
+    overflow-y: auto !important;
+  }
+  .container {
+    width: 90% !important;
+  }
+  .nutshell_container {
+    &_content {
+      align-items: center;
+
+      .informations {
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+
+      .first_name,
+      .last_name {
+        font-size: 4rem;
+      }
+      .details {
+        width: 70% !important;
+        text-align: center;
+      }
+      .resume {
+        padding-bottom: 2rem;
+      }
+    }
+    // shafat khan image
+    &_image {
+      display: none !important;
+    }
+  }
+
+  footer .footer {
+    display: none;
+  }
+}
+
+@include media-mobile {
+  body {
+    overflow-y: auto !important;
+  }
+  .container {
+    width: 90% !important;
+  }
+  .nutshell_container {
+    &_content {
+      align-items: center;
+
+      .informations {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .first_name,
+      .last_name {
+        font-size: 3.5rem;
+      }
+      .details {
+        width: 100% !important;
+        text-align: center;
+      }
+      .resume {
+        padding-bottom: 2rem;
+      }
+    }
+    // shafat khan image
+    &_image {
+      display: none !important;
+    }
+  }
+
+  footer .footer {
+    display: none;
+  }
+}

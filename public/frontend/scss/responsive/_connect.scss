@@ -1,0 +1,152 @@
+@include media-desktop-wide {
+}
+
+@include media-desktop {
+  .connect_container {
+    &_information {
+      margin-left: 2rem;
+    }
+  }
+}
+
+@include media-tablet-wide {
+  .connect_container {
+    &_content {
+      .first_name,
+      .last_name {
+        font-size: 5rem;
+      }
+      .informations {
+        font-size: 1.1rem;
+      }
+    }
+    &_information {
+      margin-left: 2.5rem;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include media-tablet-potrait {
+  .container {
+    width: 90% !important;
+  }
+  .connect_container {
+    flex-direction: column;
+    align-items: center;
+
+    // content
+    &_content {
+      align-items: center;
+      height: 30%;
+      margin-top: 3rem;
+      width: 100%;
+      .first_name {
+        color: $text_white;
+        font-size: 3.5rem;
+      }
+      .last_name {
+        color: $secondary_color;
+        font-size: 3.5rem;
+      }
+      .informations {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        line-height: 1;
+      }
+    }
+
+    // shafat khan image
+    &_information {
+      font-size: 1.2rem;
+      height: 90%;
+      width: 95%;
+
+      .content {
+        .phone_mail {
+          align-items: center;
+          height: 60px;
+          &_icon {
+            height: 1.2rem;
+          }
+        }
+        .icons {
+          justify-content: space-around;
+          margin: auto;
+          width: 250px;
+          margin-top: 5rem;
+          .connect_icons {
+            height: 1.2rem !important;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer .footer {
+    display: none;
+  }
+}
+
+@include media-mobile {
+  .container {
+    width: 90% !important;
+  }
+  .connect_container {
+    flex-direction: column;
+    align-items: center;
+
+    // content
+    &_content {
+      align-items: center;
+      height: 30%;
+      margin-top: 3rem;
+      width: 100%;
+      .first_name {
+        color: $text_white;
+        font-size: 3.5rem;
+      }
+      .last_name {
+        color: $secondary_color;
+        font-size: 3.5rem;
+      }
+      .informations {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        line-height: 1;
+      }
+    }
+
+    // shafat khan image
+    &_information {
+      font-size: 1.2rem;
+      height: 90%;
+      width: 95%;
+
+      .content {
+        .phone_mail {
+          align-items: center;
+          height: 60px;
+          &_icon {
+            height: 1.2rem;
+          }
+        }
+        .icons {
+          justify-content: space-around;
+          margin: auto;
+          width: 250px;
+          margin-top: 5rem;
+          .connect_icons {
+            height: 1.2rem !important;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer .footer {
+    display: none;
+  }
+}

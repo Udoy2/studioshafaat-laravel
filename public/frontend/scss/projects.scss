@@ -1,0 +1,19 @@
+@import "./config/config";
+@import "./navbar/navbar";
+@import "./animations/animation";
+@import "./project/project";
+@import "./default/default";
+@import "./responsive/navbar";
+@import "./responsive/projects";
+
+body {
+  background: url("../assets/images/black_paper/black_paper.png");
+  background-repeat: repeat;
+}
+
+.main {
+}
+.container {
+  width: $container_width;
+  margin: auto;
+}

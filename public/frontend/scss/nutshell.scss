@@ -1,0 +1,21 @@
+@import "./config/config";
+@import "./navbar/navbar";
+@import "./animations/animation";
+@import "./nutshell/nutshell";
+@import "./default/default";
+@import "./responsive/navbar";
+@import "./responsive/nutshell";
+
+body {
+  background: url("../assets/images/black_paper/black_paper.png");
+  background-repeat: repeat;
+  overflow-y: hidden;
+}
+
+.main {
+  height: $navbar_height_to_main_minus;
+}
+.container {
+  width: $container_width;
+  margin: auto;
+}

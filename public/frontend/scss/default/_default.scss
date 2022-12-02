@@ -1,0 +1,71 @@
+.preloader {
+  background: url("../assets/images/black_paper/black_paper.png");
+  background-repeat: repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+  @include transition-ease;
+  &.close {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 0.9rem 2rem;
+  text-decoration: none;
+  font-family: $text_font_family;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn_secondary {
+  background: none;
+  border: 1px solid $secondary_color;
+  color: $secondary_color;
+  @include transition-ease;
+  &:hover {
+    color: $text_white;
+    background: $cardhover_color;
+    border: none;
+  }
+}
+.btn_secondary-inverse {
+  background: $cardhover_color;
+  border: none;
+  color: $text_white;
+  @include transition-ease;
+  &:hover {
+    background: none;
+    border: 1px solid $secondary_color !important;
+    color: $secondary_color;
+    border: none;
+  }
+}
+
+.text_hover {
+  color: $secondary_color;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition-ease;
+  &:hover {
+    color: $text_white;
+  }
+}
+
+.icon_hover {
+  fill: $secondary_color;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition-ease;
+  &:hover {
+    fill: $text_white;
+  }
+}

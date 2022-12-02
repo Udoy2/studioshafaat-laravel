@@ -1,0 +1,9 @@
+@import "./config/config";
+@import "./default/default";
+@import "./login/login";
+
+body {
+  background: url("../assets/images/black_paper/black_paper.png");
+  background-repeat: repeat;
+  overflow-y: hidden;
+}

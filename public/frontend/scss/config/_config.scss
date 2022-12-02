@@ -1,0 +1,65 @@
+$primary_color: #212421;
+$secondary_color: #707070;
+$text_color: #c1c1c1;
+$cardhover_color: #5f6a29;
+$text_white: #fff;
+$dark_overlay_navbar_color: rgba(0, 0, 0, 0.9);
+$container_width: 80%;
+$heading_font_family: "Montserrat", sans-serif;
+$text_font_family: "Roboto", sans-serif;
+$navbar_height: 150px;
+$navbar_height_to_main_minus: calc(100vh - #{$navbar_height});
+$galley_container_width: 70vw;
+$gallery_main_image_width: 800px;
+$gallery_main_image_height: 450px;
+$gallery_content_height: 250px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin transition-ease-navbar {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin hamburger-hover-common {
+  background: $text_white;
+}
+
+@mixin transition-ease-gallery {
+  transition: all 0.5s ease-in-out;
+}
+
+// media query------------------------------
+
+@mixin media-desktop-wide {
+  @media screen and (min-width: 1170px) {
+    @content;
+  }
+}
+@mixin media-desktop {
+  @media screen and (max-width: 1169px) and (min-width: 992px) {
+    @content;
+  }
+}
+@mixin media-tablet-wide {
+  @media screen and (max-width: 991px) and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-tablet-potrait {
+  @media screen and (max-width: 767px) and (min-width: 544px) {
+    @content;
+  }
+}
+@mixin media-mobile {
+  @media screen and (max-width: 543px) {
+    @content;
+  }
+}

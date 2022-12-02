@@ -1,0 +1,256 @@
+.dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $dark_overlay_navbar_color;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  @include transition-ease-navbar;
+}
+
+.navbar_darkOverlay_toggle {
+  opacity: 1;
+  pointer-events: all;
+  @include transition-ease-navbar;
+}
+
+.navbar {
+  display: block;
+  position: relative;
+  height: $navbar_height;
+
+  // navbar wrapper
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+
+    // navbar brand
+    .navbar-brand {
+      width: 52px;
+      z-index: 110;
+      @include transition-ease-navbar;
+
+      //image inside navbar brand
+      img {
+        width: 100%;
+      }
+      // navbar brand hover effect
+      &:hover {
+        transform: scale(1.2) translateX(5px) translateY(5px);
+      }
+    }
+
+    // page heading
+    .page_heading {
+      display: block;
+      flex: 1;
+
+      h1 {
+        float: right;
+        font-size: 2.4rem;
+        font-family: $heading_font_family;
+        color: $secondary_color;
+        font-weight: 900;
+        margin-right: 7rem;
+        text-transform: uppercase;
+        line-height: 0.9;
+      }
+    }
+
+    // navbar button toggler
+    .navbar-toggler {
+      position: relative;
+      height: 40px;
+      width: 45px;
+      border-radius: 0px;
+      // border: 1px solid grey; // place holder
+      border: none;
+      background: none;
+      cursor: pointer;
+      z-index: 110;
+
+      &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: -50px;
+        background: $dark_overlay_navbar_color;
+        width: 50px;
+        height: 50px;
+        z-index: -1;
+        border-radius: 50%;
+        @include transition-ease;
+      }
+
+      //   navbar toggler icon
+      &-icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: inline-block;
+        width: 100%;
+        height: 5px;
+        background: $secondary_color;
+        transform: translateY(-50%);
+        @include transition-ease-navbar;
+      }
+      &-icon::before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        right: 0;
+        display: inline-block;
+        width: 35px;
+        height: 5px;
+        background: $secondary_color;
+        @include transition-ease-navbar;
+      }
+      &-icon::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 0;
+        display: inline-block;
+        width: 25px;
+        height: 5px;
+        background: $secondary_color;
+        @include transition-ease-navbar;
+      }
+      // hover
+      &:hover {
+        .navbar-toggler {
+          &-icon {
+            @include hamburger-hover-common;
+          }
+          &-icon::before {
+            width: 25px;
+            @include hamburger-hover-common;
+          }
+          &-icon::after {
+            width: 35px;
+            @include hamburger-hover-common;
+          }
+        }
+      }
+      // on open class
+      &.open {
+        .navbar-toggler {
+          &-icon {
+            border-bottom-right-radius: 50%;
+            border-top-right-radius: 50%;
+          }
+          &-icon::before {
+            width: 25px;
+            transform: rotate(45deg) translateY(1px) translateX(6px);
+          }
+          &-icon::after {
+            width: 25px;
+            transform: rotate(-45deg) translateY(-1px) translateX(6px);
+          }
+
+          // hover in open state
+        }
+        &::after {
+          transform: scale(40);
+          opacity: 0;
+          pointer-events: none;
+        }
+        &:hover {
+          .navbar-toggler-icon {
+            width: 70%;
+            @include hamburger-hover-common;
+          }
+        }
+      }
+    }
+  }
+
+  // navbar collapse
+  &-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; //its was flex-start before
+    position: relative;
+    height: calc(100vh - 150px);
+    width: 80%;
+    opacity: 0;
+    pointer-events: none;
+    margin: auto;
+    z-index: 110;
+    @include transition-ease-navbar;
+
+    // navbar nav
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 60%;
+      // margin-top: 50px; //myb it will need to change
+      width: 100%;
+
+      // lists
+      .nav-item {
+        position: relative;
+        list-style: none;
+        text-transform: uppercase;
+        width: 100%;
+        height: 3.5rem;
+        overflow: hidden;
+
+        .nav-link {
+          position: absolute;
+          top: 0;
+          right: 0;
+          text-decoration: none;
+          color: $secondary_color;
+          font-family: $heading_font_family;
+          font-size: 2.5rem;
+          font-weight: 900;
+          float: right;
+          @include transition-ease-navbar;
+
+          // nav link after text
+          &::after {
+            content: attr(data-name);
+            color: $text_white;
+            position: absolute;
+            top: calc(3rem + 5px);
+            right: 0;
+            @include transition-ease-navbar;
+          }
+        }
+        // nav link hover effect
+        &:hover {
+          // nav item hover effect
+          &::after {
+            width: 70px;
+          }
+          // nav link hover effect
+          .nav-link {
+            top: -2.5rem;
+            &::after {
+              top: 2.5rem;
+            }
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -5px;
+          width: 0;
+          height: 12px;
+          background: $cardhover_color;
+          @include transition-ease-navbar;
+        }
+      }
+    }
+  }
+}
